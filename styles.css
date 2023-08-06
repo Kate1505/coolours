@@ -42,3 +42,10 @@ body {
     background: rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
+@media (max-width: 575px) {
+  
+    .col h2 { 
+        font-size: 10px;
+    }  
+	
+}
