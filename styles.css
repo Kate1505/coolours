@@ -3,12 +3,14 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html, body {
+    height: 100%;
+}
 body {
     font-family: sans-serif;
-    height: 100vh;
-    display: flex;
+    display: flex;    
 }
+
 .col {
     flex: 1;
     display: flex;
@@ -39,4 +41,15 @@ body {
 .col button:hover {
     background: rgba(0, 0, 0, 0.1);
     cursor: pointer;
+}
+
+@media (max-width: 575px) {
+    body {   
+        flex-direction: column;    
+        
+    }
+    .col h2 { 
+        font-size: 10px;
+    }  
+	
 }
