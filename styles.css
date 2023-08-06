@@ -7,10 +7,13 @@ html, body {
     height: 100%;
 }
 body {
-    font-family: sans-serif;
-    display: flex;    
+    font-family:'Roboto', sans-serif;
+      
 }
-
+.col-wrap {
+    height: 100%;
+    display: flex;  
+}
 .col {
     flex: 1;
     display: flex;
@@ -42,10 +45,26 @@ body {
     background: rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
-@media (max-width: 575px) {
-  
+.change-colors {
+    margin-top: -30px;
+    display: none;
+    justify-content: center;
+}
+
+.change-colors button {
+    padding: 5px 20px;
+    font-family:'Roboto', sans-serif;
+}
+@media (max-width: 768px) {
+    .change-colors {        
+        display: flex;        
+    }	
+    .change-colors button {
+        width: 100%;
+    }
+}
+@media (max-width: 575px) {  
     .col h2 { 
         font-size: 10px;
     }  
-	
 }
