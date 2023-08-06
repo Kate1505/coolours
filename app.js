@@ -6,6 +6,11 @@ document.addEventListener('keydown', event => {
         setRandomColors()
     }
 })
+document.addEventListener('click', event => {
+    if (event.target.dataset.type === 'change') {
+        setRandomColors()
+    }
+})
 
 document.addEventListener('click', event => {
     const type = event.target.dataset.type
@@ -77,8 +82,8 @@ function updateColorsHash(colors = []) {
 function getColorsFromHash() {
     if (document.location.hash.length > 1) {
        return  document.location.hash.substring(1).split('-').map(color =>'#' + color)
-
     }
-    return []
+    setRandomColors()
+    
 }
 setRandomColors(true)
